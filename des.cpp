@@ -161,33 +161,6 @@ u64* key_array(u64 key)
 }
 
 
-//u64 s_box(u64 x) {
-//    u64 idx;
-//
-//    u64 out = 0;
-//    for (int i = 0; i < 8; i++)
-//    {
-//        idx = x >> (7-i)*6 & 0x3F ; //get the index
-//        idx = idx>>1&15|(idx&1)<<4|idx&0x20;
-//        out |= s_box_table[7-i][idx]<<i*4;
-//    }
-//    return out;
-//}
-
-// u64 s_box(u64 data) {
-//     const char index_permutation[6] = {1,6,2,3,4,5};
-//     u64 index;
-//     u64 out = 0;
-//     for (int i = 0; i < 8; i++)
-//     {
-//         index = (data>>(i*6)) & 0x3F;
-//         index = permute(index,index_permutation,6,6);
-//         out |= s_box_table[7-i][index] << i*4;
-//
-//     }
-//     return out;
-//
-// }
 u64 s_box(u64 in)
 {
 
